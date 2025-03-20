@@ -33,13 +33,16 @@ public class TransactionService {
         listaTransactions.add(dto);
     }
 
-    public void cleanTransactions(){
+    public void clearTransactions(){
         listaTransactions.clear();
     }
 
-    public List<TransactionRequestDTO> searchStatiscs(Integer segundos){
+    public List<TransactionRequestDTO> searchStatiscs(Integer busca){
         // tempo atual - minutos(segundos) = intervalo
-        OffsetDateTime intervalo = OffsetDateTime.now().minusSeconds(segundos);
+        log.info("Inicadas buscas de transações por tempo " + busca);
+        OffsetDateTime intervalo = OffsetDateTime.now().minusSeconds(busca);
+
+        log.info("Retorno de transações com sucesso");
         return listaTransactions.stream().filter(t -> t.dataHora().isAfter(intervalo)).toList();
     }
 

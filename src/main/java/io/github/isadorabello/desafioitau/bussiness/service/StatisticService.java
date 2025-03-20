@@ -15,8 +15,8 @@ public class StatisticService {
 
     public final TransactionService tService;
 
-    public StatisticResponseDTO transactionsStats (Integer intervalo){
-        List<TransactionRequestDTO> transactions = tService.searchStatiscs(intervalo);
+    public StatisticResponseDTO transactionsStats (Integer busca){
+        List<TransactionRequestDTO> transactions = tService.searchStatiscs(busca);
         DoubleSummaryStatistics stats = transactions.stream().mapToDouble(TransactionRequestDTO::valor).summaryStatistics();
         return new StatisticResponseDTO(stats.getCount(), stats.getSum(), stats.getAverage(), stats.getMin(), stats.getMax());
     }
