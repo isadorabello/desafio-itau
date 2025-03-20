@@ -33,4 +33,14 @@ public class TransactionService {
         listaTransactions.add(dto);
     }
 
+    public void cleanTransactions(){
+        listaTransactions.clear();
+    }
+
+    public List<TransactionRequestDTO> searchStatiscs(Integer segundos){
+        // tempo atual - minutos(segundos) = intervalo
+        OffsetDateTime intervalo = OffsetDateTime.now().minusSeconds(segundos);
+        return listaTransactions.stream().filter(t -> t.dataHora().isAfter(intervalo)).toList();
+    }
+
 }
