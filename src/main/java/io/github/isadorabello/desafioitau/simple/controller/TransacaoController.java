@@ -1,8 +1,8 @@
-package io.github.isadorabello.desafioitau.controller;
+package io.github.isadorabello.desafioitau.simple.controller;
 
-import io.github.isadorabello.desafioitau.dto.TransacaoRequest;
-import io.github.isadorabello.desafioitau.model.Transacao;
-import io.github.isadorabello.desafioitau.service.TransacaoService;
+import io.github.isadorabello.desafioitau.simple.dto.TransacaoRequest;
+import io.github.isadorabello.desafioitau.simple.model.Transacao;
+import io.github.isadorabello.desafioitau.simple.service.TransacaoService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.OffsetDateTime;
 
 @RestController
-@RequestMapping("/transacao")
+@RequestMapping("/transacoes")
 public class TransacaoController {
 
     private final TransacaoService service;

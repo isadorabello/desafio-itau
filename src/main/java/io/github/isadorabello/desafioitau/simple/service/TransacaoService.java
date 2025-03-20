@@ -1,6 +1,6 @@
-package io.github.isadorabello.desafioitau.service;
+package io.github.isadorabello.desafioitau.simple.service;
 
-import io.github.isadorabello.desafioitau.model.Transacao;
+import io.github.isadorabello.desafioitau.simple.model.Transacao;
 import org.springframework.stereotype.Service;
 
 import java.time.OffsetDateTime;

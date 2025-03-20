@@ -1,4 +1,4 @@
-package io.github.isadorabello.desafioitau.model;
+package io.github.isadorabello.desafioitau.simple.model;
 
 import java.time.OffsetDateTime;
 

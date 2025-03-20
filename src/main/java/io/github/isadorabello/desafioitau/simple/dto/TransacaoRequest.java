@@ -1,4 +1,4 @@
-package io.github.isadorabello.desafioitau.dto;
+package io.github.isadorabello.desafioitau.simple.dto;
 
 import jakarta.validation.constraints.NotNull;
 
