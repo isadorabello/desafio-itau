@@ -1,6 +1,6 @@
 package io.github.isadorabello.desafioitau.controller;
 
-import io.github.isadorabello.desafioitau.bussiness.service.StatisticService;
+import io.github.isadorabello.desafioitau.business.service.StatisticService;
 import io.github.isadorabello.desafioitau.controller.dtos.StatisticResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;

@@ -1,4 +1,4 @@
-package io.github.isadorabello.desafioitau.bussiness.service;
+package io.github.isadorabello.desafioitau.business.service;
 
 import io.github.isadorabello.desafioitau.controller.dtos.TransactionRequestDTO;
 import io.github.isadorabello.desafioitau.infrastructure.exceptions.UnprocessableEntity;

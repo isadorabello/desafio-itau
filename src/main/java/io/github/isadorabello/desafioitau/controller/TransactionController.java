@@ -1,6 +1,6 @@
 package io.github.isadorabello.desafioitau.controller;
 
-import io.github.isadorabello.desafioitau.bussiness.service.TransactionService;
+import io.github.isadorabello.desafioitau.business.service.TransactionService;
 import io.github.isadorabello.desafioitau.controller.dtos.TransactionRequestDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
