@@ -19,7 +19,7 @@ public class TransactionService {
 
     public void addTransactions(TransactionRequestDTO dto){
 
-        log.info("Iniciado o processamento de gravar transações");
+        log.info("Iniciado o processamento de gravar transações " + dto);
 
         if(dto.dataHora().isAfter(OffsetDateTime.now())){
             log.error("Data e Hora no futuro");
