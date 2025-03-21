@@ -1,8 +1,7 @@
 package io.github.isadorabello.desafioitau.business.service;
 
 
-import io.github.isadorabello.desafioitau.controller.dtos.StatisticResponseDTO;
-import io.github.isadorabello.desafioitau.controller.dtos.TransactionRequestDTO;
+import io.github.isadorabello.desafioitau.controller.dtos.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
