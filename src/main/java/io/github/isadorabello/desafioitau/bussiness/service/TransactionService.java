@@ -22,19 +22,21 @@ public class TransactionService {
         log.info("Iniciado o processamento de gravar transações");
 
         if(dto.dataHora().isAfter(OffsetDateTime.now())){
-            log.info("Data e Hora no futuro");
+            log.error("Data e Hora no futuro");
             throw new UnprocessableEntity("Data e Hora no futuro");
         }
         if(dto.valor() < 0){
-            log.info("Valor negativo");
+            log.error("Valor negativo");
             throw new UnprocessableEntity("Valor negativo");
         }
 
         listaTransactions.add(dto);
+        log.info("Transações adicionadas - OK");
     }
 
     public void clearTransactions(){
         listaTransactions.clear();
+        log.info("Transações deletadas - OK");
     }
 
     public List<TransactionRequestDTO> searchStatiscs(Integer busca){
