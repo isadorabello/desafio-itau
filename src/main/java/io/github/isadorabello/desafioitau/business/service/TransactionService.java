@@ -19,7 +19,7 @@ public class TransactionService {
 
     public void addTransactions(TransactionRequestDTO dto){
 
-        log.info("Iniciado o processamento de gravar transações " + dto);
+        log.info("Iniciado o processamento de gravar transações {}", dto);
 
         if(dto.dataHora().isAfter(OffsetDateTime.now())){
             log.error("Data e Hora no futuro");
@@ -35,13 +35,14 @@ public class TransactionService {
     }
 
     public void clearTransactions(){
+        log.info("Iniciado o processamento de deletar transações deletadas");
         listaTransactions.clear();
         log.info("Transações deletadas - OK");
     }
 
-    public List<TransactionRequestDTO> searchStatiscs(Integer busca){
+    public List<TransactionRequestDTO> searchTransactions(Integer busca){
         // tempo atual - minutos(segundos) = intervalo
-        log.info("Inicadas buscas de transações por tempo " + busca);
+        log.info("Inicadas buscas de transações por tempo {}", busca);
         OffsetDateTime intervalo = OffsetDateTime.now().minusSeconds(busca);
 
         log.info("Retorno de transações com sucesso");

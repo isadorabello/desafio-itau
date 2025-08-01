@@ -35,7 +35,7 @@ public class TransactionServiceTest {
 
         transacaoService.addTransactions(transacao);
 
-        List<TransactionRequestDTO> transacoes = transacaoService.searchStatiscs(5000);
+        List<TransactionRequestDTO> transacoes = transacaoService.searchTransactions(5000);
 
         assertTrue(transacoes.contains(transacao));
     }
@@ -63,7 +63,7 @@ public class TransactionServiceTest {
 
         transacaoService.clearTransactions();
 
-        List<TransactionRequestDTO> transacoes = transacaoService.searchStatiscs(5000);
+        List<TransactionRequestDTO> transacoes = transacaoService.searchTransactions(5000);
 
         assertTrue(transacoes.isEmpty());
     }
@@ -76,7 +76,7 @@ public class TransactionServiceTest {
         transacaoService.addTransactions(transacao);
         transacaoService.addTransactions(dto);
 
-        List<TransactionRequestDTO> transacoes = transacaoService.searchStatiscs(60);
+        List<TransactionRequestDTO> transacoes = transacaoService.searchTransactions(60);
 
         assertTrue(transacoes.contains(transacao));
         assertFalse(transacoes.contains(dto));

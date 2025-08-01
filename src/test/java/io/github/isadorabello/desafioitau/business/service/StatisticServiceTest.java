@@ -36,12 +36,12 @@ public class StatisticServiceTest {
 
     @Test
     void calcularEstatisticasComSucesso(){
-        when(transacaoService.searchStatiscs(60))
+        when(transacaoService.searchTransactions(60))
                 .thenReturn(Collections.singletonList(transacao));
 
         StatisticResponseDTO resultado = estatisticasService.transactionsStats(60);
 
-        verify(transacaoService, times(1)).searchStatiscs(60);
+        verify(transacaoService, times(1)).searchTransactions(60);
         Assertions.assertThat(resultado).usingRecursiveComparison().isEqualTo(estatisticas);
     }
 
@@ -51,12 +51,12 @@ public class StatisticServiceTest {
         StatisticResponseDTO estasticaEsperado =
                 new StatisticResponseDTO(0l, 0.0, 0.0, 0.0, 0.0);
 
-        when(transacaoService.searchStatiscs(60))
+        when(transacaoService.searchTransactions(60))
                 .thenReturn(Collections.emptyList());
 
         StatisticResponseDTO resultado = estatisticasService.transactionsStats(60);
 
-        verify(transacaoService, times(1)).searchStatiscs(60);
+        verify(transacaoService, times(1)).searchTransactions(60);
         Assertions.assertThat(resultado).usingRecursiveComparison().isEqualTo(estasticaEsperado);
     }
 

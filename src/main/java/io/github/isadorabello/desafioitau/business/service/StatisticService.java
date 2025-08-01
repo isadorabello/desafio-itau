@@ -21,7 +21,7 @@ public class StatisticService {
 
         long start = System.currentTimeMillis();
 
-        List<TransactionRequestDTO> transactions = tService.searchStatiscs(busca);
+        List<TransactionRequestDTO> transactions = tService.searchTransactions(busca);
 
         if(transactions.isEmpty()){
             return new StatisticResponseDTO(0L,0.0, 0.0, 0.0, 0.0);
