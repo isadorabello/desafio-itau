@@ -31,7 +31,7 @@ public class StatisticServiceTest {
     @BeforeEach
     void setUp(){
         transacao = new TransactionRequestDTO(20.0, OffsetDateTime.now());
-        estatisticas = new StatisticResponseDTO(1l, 20.0, 20.0, 20.0, 20.0);
+        estatisticas = new StatisticResponseDTO(1L, 20.0, 20.0, 20.0, 20.0);
     }
 
     @Test
@@ -49,7 +49,7 @@ public class StatisticServiceTest {
     void calcularEstatisticasQuandoListaVazia(){
 
         StatisticResponseDTO estasticaEsperado =
-                new StatisticResponseDTO(0l, 0.0, 0.0, 0.0, 0.0);
+                new StatisticResponseDTO(0L, 0.0, 0.0, 0.0, 0.0);
 
         when(transacaoService.searchTransactions(60))
                 .thenReturn(Collections.emptyList());

@@ -10,7 +10,7 @@ management:
     env:
       enable: true
     app:
-      name: "Api de Transações"
+      name: "Desafio Itau - API Transações"
       version: 1.0.0
       description: "Api responsável por gerenciar transações e estatísticas"
     metrics:
