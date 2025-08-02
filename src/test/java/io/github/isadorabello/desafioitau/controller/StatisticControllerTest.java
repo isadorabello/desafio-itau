@@ -41,7 +41,7 @@ public class StatisticControllerTest {
         when(estatisticasService.transactionsStats(60)).thenReturn(estatisticas);
 
         mockMvc.perform(get("/estatistica")
-                        .param("intervaloBusca", "60")
+                        .param("intervalo", "60")
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
